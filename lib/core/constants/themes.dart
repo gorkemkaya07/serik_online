@@ -36,7 +36,7 @@ class AppThemes {
         fontWeight: FontWeight.w500,
       ),
       bodyMedium: TextStyle(
-        fontSize: 9,
+        fontSize: 10,
         color: AppColors.subtitleColor,
         fontWeight: FontWeight.w300,
       ),
@@ -44,7 +44,12 @@ class AppThemes {
         fontSize: 10,
         color: AppColors.primaryColor,
         fontWeight: FontWeight.bold,
-      ),     
+      ), 
+      labelMedium:   TextStyle(
+        fontSize: 10,
+        color: AppColors.primaryColor,
+        fontWeight: FontWeight.w400,
+      ),   
     ),
   );
 }

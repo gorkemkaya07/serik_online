@@ -9,3 +9,12 @@ class AppColors {
   static const Color lineColor = Color(0xFFF2F2F2);
   static const Color backgroundColor = Colors.white;
 }
+
+class NavigationColors {
+  static const Color activeIconColor = Color(0xFF3F21F9);
+  static const Color inactiveIconColor = Color(0xFF828282);
+  static const Color activeTextColor = Color(0xFF3F21F9);
+  static const Color inactiveTextColor = Color(0xFF828282);
+  static const Color activeLineColor = Color(0xFF3F21F9);
+  static const Color backgroundColor=Color(0xFFF2F2F2);
+}

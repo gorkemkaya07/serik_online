@@ -1,16 +1,15 @@
 import 'package:get/get.dart';
-import 'package:serik_online/core/widget/custom_bottom_nav_bar/bindings/custom_bottom_nav_bar_binding.dart';
-import 'package:serik_online/core/widget/custom_bottom_nav_bar/views/custom_bottom_nav_bar_view.dart';
-import 'package:serik_online/modules/ads/bindings/ads_binding.dart';
-import 'package:serik_online/modules/ads/views/ads_view.dart';
-import 'package:serik_online/modules/home/bindings/home_binding.dart';
-import 'package:serik_online/modules/info/bindings/info_binding.dart';
-import 'package:serik_online/modules/info/views/info_view.dart';
-import 'package:serik_online/modules/news/bindings/news_binding.dart';
-import 'package:serik_online/modules/news/views/news_view.dart';
-import 'package:serik_online/modules/profile/bindings/profile_binding.dart';
-import 'package:serik_online/modules/profile/views/profile_view.dart';
-import '../../modules/home/views/home_view.dart';
+import 'package:serik_online/presentation/ads/bindings/ads_binding.dart';
+import 'package:serik_online/presentation/ads/views/ads_view.dart';
+import 'package:serik_online/presentation/home/bindings/home_binding.dart';
+import 'package:serik_online/presentation/home/widgets/home_story_detail_view.dart';
+import 'package:serik_online/presentation/info/bindings/info_binding.dart';
+import 'package:serik_online/presentation/info/views/info_view.dart';
+import 'package:serik_online/presentation/news/bindings/news_binding.dart';
+import 'package:serik_online/presentation/news/views/news_view.dart';
+import 'package:serik_online/presentation/profile/bindings/profile_binding.dart';
+import 'package:serik_online/presentation/profile/views/profile_view.dart';
+import '../../presentation/home/views/home_view.dart';
 
 part 'app_routes.dart';
 
@@ -44,10 +43,9 @@ class AppPages {
       page: () => const ProfileView(),
       binding: ProfileBinding(),
     ),
- GetPage(
-      name: _Paths.NAV, // Bu yolu da app_routes.dart dosyasına eklemelisiniz
-      page: () => CustomBottomNavBarView(), // Doğru widget burada kullanılmalı
-      binding: CustomBottomNavBarBinding(),
+    GetPage(
+      name: _Paths.STORY_DETAIL,
+      page: () => HomeStoryDetailView(),
     ),
   ];
 }
