@@ -5,7 +5,6 @@ class AppThemes {
   static final ThemeData theme = ThemeData(
     scaffoldBackgroundColor: AppColors.backgroundColor,
     fontFamily: 'Poppins',
-    
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
       fillColor: AppColors.textFieldBg,
@@ -23,7 +22,6 @@ class AppThemes {
       ),
       contentPadding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
     ),
-    
     textTheme: const TextTheme(
       headlineLarge: TextStyle(
         fontSize: 16,
@@ -44,12 +42,12 @@ class AppThemes {
         fontSize: 10,
         color: AppColors.primaryColor,
         fontWeight: FontWeight.bold,
-      ), 
-      labelMedium:   TextStyle(
+      ),
+      labelMedium: TextStyle(
         fontSize: 12,
         color: AppColors.primaryColor,
         fontWeight: FontWeight.w400,
-      ),   
+      ),
     ),
   );
 }
