@@ -26,17 +26,17 @@ class AppThemes {
     
     textTheme: const TextTheme(
       headlineLarge: TextStyle(
-        fontSize: 14,
+        fontSize: 16,
         color: AppColors.titleColor,
         fontWeight: FontWeight.bold,
       ),
       titleMedium: TextStyle(
-        fontSize: 10,
+        fontSize: 14,
         color: AppColors.titleColor,
         fontWeight: FontWeight.w500,
       ),
       bodyMedium: TextStyle(
-        fontSize: 10,
+        fontSize: 12,
         color: AppColors.subtitleColor,
         fontWeight: FontWeight.w300,
       ),
@@ -46,7 +46,7 @@ class AppThemes {
         fontWeight: FontWeight.bold,
       ), 
       labelMedium:   TextStyle(
-        fontSize: 10,
+        fontSize: 12,
         color: AppColors.primaryColor,
         fontWeight: FontWeight.w400,
       ),   
