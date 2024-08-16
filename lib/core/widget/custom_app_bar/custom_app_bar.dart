@@ -26,14 +26,33 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 'assets/images/app_logo.png', // İkonun dosya yolunu belirtin
                 height: 30,
               ),
-              const Text(
-                'SERIK ONLINE',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 2,
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Navigator.canPop(context)
+                      ? // Sayfanın geri dönülebilir olup olmadığını kontrol eder
+                      IconButton(
+                          icon: const Icon(Icons.arrow_back),
+                          onPressed: () {
+                            Get.back();
+                          },
+                        )
+                      : const Spacer(flex: 1),
+                  const Expanded(
+                    flex: 3,
+                    child: Text(
+                      textAlign: TextAlign.center,
+                      'SERIK ONLINE',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 2,
+                      ),
+                    ),
+                  ),
+                  const Spacer(flex: 1)
+                ],
               ),
               const CustomDivider()
             ],

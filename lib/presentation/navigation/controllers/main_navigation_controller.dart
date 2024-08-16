@@ -9,7 +9,7 @@ import '../../profile/views/profile_view.dart';
 
 class NavigationController extends GetxController {
   var currentIndex = 0.obs;
-  final List<Widget> pages = const [
+  final List<Widget> pages = [
     HomeView(),
     NewsView(),
     AdsView(),

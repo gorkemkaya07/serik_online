@@ -7,6 +7,8 @@ import 'package:serik_online/presentation/info/bindings/info_binding.dart';
 import 'package:serik_online/presentation/info/views/info_view.dart';
 import 'package:serik_online/presentation/news/bindings/news_binding.dart';
 import 'package:serik_online/presentation/news/views/news_view.dart';
+import 'package:serik_online/presentation/news_detail/bindings/news_detail_binding.dart';
+import 'package:serik_online/presentation/news_detail/views/news_detail_view.dart';
 import 'package:serik_online/presentation/profile/bindings/profile_binding.dart';
 import 'package:serik_online/presentation/profile/views/profile_view.dart';
 import '../../presentation/home/views/home_view.dart';
@@ -25,7 +27,7 @@ class AppPages {
     // Diğer rotalar...
     GetPage(
       name: _Paths.NEWS,
-      page: () => const NewsView(),
+      page: () => NewsView(),
       binding: NewsBinding(),
     ),
     GetPage(
@@ -47,5 +49,9 @@ class AppPages {
       name: _Paths.STORY_DETAIL,
       page: () => HomeStoryDetailView(),
     ),
+    GetPage(
+        name: _Paths.NEWS_DETAIL,
+        page: () => NewsDetailView(),
+        binding: NewsDetailBinding()),
   ];
 }

@@ -7,6 +7,7 @@ abstract class Routes {
   static const INFO = _Paths.INFO;
   static const PROFILE = _Paths.PROFILE;
   static const STORY_DETAIL = _Paths.STORY_DETAIL;
+  static const NEWS_DETAIL = _Paths.NEWS_DETAIL;
   // Diğer rotalar...
 }
 
@@ -17,5 +18,6 @@ abstract class _Paths {
   static const INFO = '/info';
   static const PROFILE = '/profile';
   static const STORY_DETAIL = '/story_detail';
+  static const NEWS_DETAIL = '/news_detail';
   // Diğer yollar...
 }

@@ -6,26 +6,37 @@ class HomeLatestNewsListView extends StatelessWidget {
   final List<Map<String, String>> newsList;
 
   const HomeLatestNewsListView({
-    Key? key,
+    super.key,
     required this.newsList,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 15.0,left: 20),
+      padding: const EdgeInsets.only(left: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Başlık
-          Text(
-            "En Son Haberler",
-            style: Theme.of(context).textTheme.headlineLarge,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "En Son Haberler",
+                style: Theme.of(context).textTheme.headlineLarge,
+              ),
+              TextButton(
+                onPressed: () {},
+                child: Text(
+                  "Hepsini Göster",
+                  style: Theme.of(context).textTheme.labelLarge,
+                ),
+              ),
+            ],
           ),
-          const SizedBox(height: 8),
           // Yana kaydırılabilir liste
           SizedBox(
-            height: Get.height * .25, // Kartların yüksekliğini ayarlıyoruz
+            height: Get.height * .28, // Kartların yüksekliğini ayarlıyoruz
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: newsList.length,
@@ -33,19 +44,19 @@ class HomeLatestNewsListView extends StatelessWidget {
                 final news = newsList[index];
                 return GestureDetector(
                   onTap: () {
-                    Get.toNamed('/newsDetail', arguments: news['id']);
+                    Get.toNamed('/news_detail', arguments: news);
                   },
                   child: Padding(
-                    padding: const EdgeInsets.only(right: 16.0),
+                    padding: const EdgeInsets.only(right: 18.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         // Resim
                         SizedBox(
-                          width: Get.width * .65,
-                          height: Get.height * .15,
+                          width: Get.width * .75,
+                          height: Get.height * .18,
                           child: ClipRRect(
-                            borderRadius: BorderRadius.circular(16),
+                            borderRadius: BorderRadius.circular(8),
                             child: Image.network(
                               news['imgUrl']!,
                               fit: BoxFit.fill,
@@ -63,7 +74,7 @@ class HomeLatestNewsListView extends StatelessWidget {
                             overflow: TextOverflow.ellipsis,
                           ),
                         ),
-                        const SizedBox(height: 4),
+                        const SizedBox(height: 2),
                         // Yazar ve zaman bilgisi
                         SizedBox(
                           width: Get.width * .65,
@@ -77,8 +88,8 @@ class HomeLatestNewsListView extends StatelessWidget {
                               const Text(
                                 '•',
                                 style: TextStyle(
-                                  color: AppColors.textFieldText,
-                                ),
+                                    color: AppColors.textFieldText,
+                                    fontSize: 16),
                               ),
                               const SizedBox(width: 8),
                               Text(

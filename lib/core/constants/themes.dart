@@ -28,6 +28,11 @@ class AppThemes {
         color: AppColors.titleColor,
         fontWeight: FontWeight.bold,
       ),
+      titleLarge: TextStyle(
+        fontSize: 16,
+        color: AppColors.titleColor,
+        fontWeight: FontWeight.w500,
+      ),
       titleMedium: TextStyle(
         fontSize: 14,
         color: AppColors.titleColor,
@@ -38,8 +43,13 @@ class AppThemes {
         color: AppColors.subtitleColor,
         fontWeight: FontWeight.w300,
       ),
+      bodyLarge: TextStyle(
+        fontSize: 12,
+        color: Colors.black87,
+        fontWeight: FontWeight.w300,
+      ),
       labelLarge: TextStyle(
-        fontSize: 10,
+        fontSize: 12,
         color: AppColors.primaryColor,
         fontWeight: FontWeight.bold,
       ),
